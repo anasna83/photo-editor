@@ -131,12 +131,7 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
                                            width: UIScreen.main.bounds.width,
                                            height: view.frame.height - 40)
         
-        scrollView.contentSize = CGSize(width: 2.0 * screenSize.width,
-                                        height: scrollView.frame.size.height)
-        if hideEmoji == true {
-            scrollView.contentSize = CGSize(width: screenSize.width,
-                                            height: scrollView.frame.size.height)
-        }
+        scrollView.contentSize = CGSize(width:(hideEmoji == true ? 1.0 : 2.0) * screenSize.width,height: scrollView.frame.size.height)
     }
     
     override func didReceiveMemoryWarning() {
