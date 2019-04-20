@@ -28,7 +28,7 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
     var partialView: CGFloat {
         return UIScreen.main.bounds.height - 380
     }
-    
+    var hideEmoji = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,6 +97,12 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         prepareBackgroundView()
+        if hideEmoji == true {
+            scrollView.contentSize = CGSize(width: screenSize.width,
+                                            height: scrollView.frame.size.height)
+            scrollView.isPagingEnabled = !hideEmoji
+            pageControl.numberOfPages = hideEmoji == true ? 0 : 2
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -127,6 +133,10 @@ class StickersViewController: UIViewController, UIGestureRecognizerDelegate {
         
         scrollView.contentSize = CGSize(width: 2.0 * screenSize.width,
                                         height: scrollView.frame.size.height)
+        if hideEmoji == true {
+            scrollView.contentSize = CGSize(width: screenSize.width,
+                                            height: scrollView.frame.size.height)
+        }
     }
     
     override func didReceiveMemoryWarning() {

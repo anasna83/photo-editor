@@ -12,6 +12,7 @@ import UIKit
 extension PhotoEditorViewController {
     
     func addStickersViewController() {
+        stickersViewController.hideEmoji = hideEmoji
         stickersVCIsVisible = true
         hideToolbar(hide: true)
         self.canvasImageView.isUserInteractionEnabled = false

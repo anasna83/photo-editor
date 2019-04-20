@@ -68,6 +68,7 @@ public final class PhotoEditorViewController: UIViewController {
     var activeTextView: UITextView?
     var imageViewToPan: UIImageView?
     var isTyping: Bool = false
+    var hideEmoji = false
     
     
     var stickersViewController: StickersViewController!
