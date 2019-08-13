@@ -35,7 +35,18 @@ extension PhotoEditorViewController {
             if (endFrame?.origin.y)! >= UIScreen.main.bounds.size.height {
                 self.colorPickerViewBottomConstraint?.constant = 0.0
             } else {
-                self.colorPickerViewBottomConstraint?.constant = endFrame?.size.height ?? 0.0
+                var bottomPadding : CGFloat = 0
+                if #available(iOS 11.0, *) , let window = UIApplication.shared.keyWindow {
+                    if window.safeAreaInsets.bottom > 0 {
+                        bottomPadding = window.safeAreaInsets.bottom / 2
+                    }
+                }
+                
+                if let _  = endFrame {
+                    self.colorPickerViewBottomConstraint?.constant = endFrame!.size.height - bottomPadding
+                } else {
+                    self.colorPickerViewBottomConstraint?.constant = 0
+                }
             }
             UIView.animate(withDuration: duration,
                            delay: TimeInterval(0),
