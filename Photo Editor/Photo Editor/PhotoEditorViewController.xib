@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoEditorViewController" customModule="iOSPhotoEditor" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoEditorViewController" customModule="Photo_Editor" customModuleProvider="target">
             <connections>
                 <outlet property="bottomGradient" destination="ZGa-1B-gkO" id="pYn-g8-ak7"/>
                 <outlet property="bottomToolbar" destination="87h-1G-t5q" id="Pzi-Dw-qOq"/>
@@ -72,7 +72,7 @@
                         <constraint firstItem="5rw-9v-ExQ" firstAttribute="leading" secondItem="S1Y-ZS-dct" secondAttribute="leading" id="v73-ro-BkR"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLz-36-0xz" customClass="GradientView" customModule="iOSPhotoEditor" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLz-36-0xz" customClass="GradientView" customModule="Photo_Editor" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -158,7 +158,7 @@
                         <constraint firstItem="9an-1W-thw" firstAttribute="leading" secondItem="3MS-N5-3xY" secondAttribute="leading" constant="12" id="lPL-cU-BVr"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGa-1B-gkO" customClass="GradientView" customModule="iOSPhotoEditor" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGa-1B-gkO" customClass="GradientView" customModule="Photo_Editor" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="782" width="414" height="80"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -314,7 +314,7 @@
                 <constraint firstAttribute="trailing" secondItem="87h-1G-t5q" secondAttribute="trailing" id="kaD-bR-ZZt"/>
                 <constraint firstItem="S1Y-ZS-dct" firstAttribute="centerY" secondItem="HPk-Bg-V0q" secondAttribute="centerY" id="lCZ-Hj-EUs"/>
                 <constraint firstAttribute="trailing" secondItem="rLz-36-0xz" secondAttribute="trailing" id="moc-tG-rwG"/>
-                <constraint firstAttribute="bottom" secondItem="Cy8-ap-fH9" secondAttribute="bottom" id="mok-x4-xHA"/>
+                <constraint firstItem="ymm-th-TTo" firstAttribute="bottom" secondItem="Cy8-ap-fH9" secondAttribute="bottom" constant="-34" id="mok-x4-xHA"/>
                 <constraint firstItem="ymm-th-TTo" firstAttribute="bottom" secondItem="yAt-sK-1nK" secondAttribute="bottom" constant="12" id="of3-AC-FQE"/>
                 <constraint firstItem="rLz-36-0xz" firstAttribute="leading" secondItem="HPk-Bg-V0q" secondAttribute="leading" id="orL-eE-RPq"/>
                 <constraint firstItem="ymm-th-TTo" firstAttribute="bottom" secondItem="ZGa-1B-gkO" secondAttribute="bottom" id="uXH-MJ-Z8t"/>
